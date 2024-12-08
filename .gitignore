@@ -1,0 +1,15 @@
+# Node.js dependencies
+node_modules/
+nykaafe/node_modules/
+nykaabe/node_modules/
+
+# Build output
+nykaafe/build/
+nykaabe/dist/
+
+# Environment variables
+nykaafe/.env
+nykaabe/.env
+
+# Logs
+*.log
