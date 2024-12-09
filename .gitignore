@@ -4,11 +4,10 @@ nykaafe/node_modules/
 nykaabe/node_modules/
 
 # Build output
-nykaafe/build/
+nykaafe/dist/
 nykaabe/dist/
 
 # Environment variables
-nykaafe/.env
 nykaabe/.env
 
 # Logs
