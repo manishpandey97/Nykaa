@@ -1,28 +1,37 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function Brands() {
+function Brands({ heading, setHeading }) {
+    const navigate = useNavigate('')
+    const updateHeading = (e) => {
+        setHeading(e.target.textContent);
+        localStorage.setItem('heading', JSON.stringify(heading));
+        navigate('/sort');
+    };
     const A = ["A Big Indian Story", "A Clutch Story", "A Fragrance Story", "A'kin", "Aadita", "AANCHAL SAYAL", "AAPNO RAJASTHAN", "Aaranyaa", "Aaruvi Ruchi Verma"
         , "Aastey", "Aatmana", "Abdesigns", "ABELARDO DE MODA", "Abelino", "Abena", "Absorbia", "Accessher", "Accessorize London", "Ace Nutrimony", "ACE THE SPACE", "Acne Squad"
-        , "Acne-X Topical", "Acnestar", "Actifit", "Adam Wulf", "Addery", "Addons", "Adhyay", "adidas", "Adidas Fragrances", "adidas Originals", "Adigo", "Adira", "ADITI WASAN"
-        , "Adwitiya", "ADYA", "Aeropostale", "Aesthetic Bodies", "AESTHETIC NATION", "Affaires", "AFFOREST", "Aflairza", "Afzal", "Agaro", "Agro Composites", "Ahaglow", "AHC"
-        , "Aigner", "Ajmal India", "Akira Furnishings", "Akiva", "Akulya Jewels", "Alainne", "Alan Truman", "ALANNA", "Albatross", "Alberto Torresi", "Alcis", "Alcove",
-        "Aldo", "Aleva Naturals", "Alexandre Christie", "Alexandre. J", "ALFAPARF MILANO", "Alicia Souza", "ALiX AViEN PARIS", "All Good Scents", "Allen Solly",
-        "Allin Exporters", "Allure", "alo", "Aloe Veda", "Alograce", "Alpecin", "Alphavedic", "Alpino", "ALSO-A LOOK TO STAND OUT", "Alyssa Ashley", "amag Beauty",
-        "Amalfiee Ceramics", "Amaltaas", "Amante", "Amaya Decors", "AMAzing EARTH", "Amazon", "Amazon Series", "Amazonas", "Ambi Pur", "Ambrane", "Ame", "Amefa",
-        "American Eagle", "Aminu", "Amoli Concepts", "AMOUROUD", "Amouve", "Amritam by Good Earth", "AMYRA", "Ana Hickmann", "Anaar", "Anastasia Beverly Hills",
-        "ANCHOR HOCKING", "Ancient Flower", "Ancient Living", "And", "And Also", "AND Fragrances", "Andis", "andMe", "Andreas Osten", "Anekaant", "Angeline", "Angie Homes"
-        , "Angloindu", "Anika's Creations", "Anko", "Anna Claire", "Anne Klein", "Anomaly", "Ansee by Addery", "Ansell", "Anthi", "Antonio Banderas", "ANUSHKA JAIN JEWELLERY"
-        , "Anveya", "AOMIDORI SHIMAI", "Aphrodyte Me", "Apieu", "Aqualogica", "Aramis", "Aramusk", "Arata", "Aravi Organic", "Archies", "Arganicare", "Argatin", "ARHAT ORGANIZERS"
-        , "Ariel", "Aries Gold", "Aristocrat", "Ariul", "ARMAF", "ARMANI EXCHANGE", "Aroma Care", "Aroma Magic", "Aroma Treasures", "AromaMusk", "Aromatique", "ART & PARFUM"
-        , "Art Vibes", "Arth", "Artifice", "Artisan Lab", "Artsy Design Co.", "Aryanveda", "asa", "Asaya", "Ashnam", "Ashpveda", "Asics", "Asmitta", "Aspen", "Assemblage"
-        , "Assembly", "Astaberry", "Astrid", "At Home by Nilkamal", "ATARSTORY", "Atelier Des Ors", "Athlisis", "Attar Ayurveda", "Atulya", "August Bioscience"
-        , "Auguste Skin", "Aulerth", "Auli", "AURA STUDIO", "Auraa Trends", "AuraVedic", "Aureana", "Auric", "Avasha", "Aveda", "Aveeno", "Avene", "AVI-8", "Avimee Herbal",
-        "Avior Jewels", "Avnii Organics", "Avon", "AVYYA", "Awestuffs", "Axe", "Axiom", "Axis-Y", "AY", "AYA", "AyouthVeda", "Ayuga", "Ayusoul Ayurveda", "Ayuveer", "AYUVYA",
-        "Azafran", "Azah", "Azai by Nykaa Fashion", "Azani", "Azzaro"]
+        // , "Acne-X Topical", "Acnestar", "Actifit", "Adam Wulf", "Addery", "Addons", "Adhyay", "adidas", "Adidas Fragrances", "adidas Originals", "Adigo", "Adira", "ADITI WASAN"
+        // , "Adwitiya", "ADYA", "Aeropostale", "Aesthetic Bodies", "AESTHETIC NATION", "Affaires", "AFFOREST", "Aflairza", "Afzal", "Agaro", "Agro Composites", "Ahaglow", "AHC"
+        // , "Aigner", "Ajmal India", "Akira Furnishings", "Akiva", "Akulya Jewels", "Alainne", "Alan Truman", "ALANNA", "Albatross", "Alberto Torresi", "Alcis", "Alcove",
+        // "Aldo", "Aleva Naturals", "Alexandre Christie", "Alexandre. J", "ALFAPARF MILANO", "Alicia Souza", "ALiX AViEN PARIS", "All Good Scents", "Allen Solly",
+        // "Allin Exporters", "Allure", "alo", "Aloe Veda", "Alograce", "Alpecin", "Alphavedic", "Alpino", "ALSO-A LOOK TO STAND OUT", "Alyssa Ashley", "amag Beauty",
+        // "Amalfiee Ceramics", "Amaltaas", "Amante", "Amaya Decors", "AMAzing EARTH", "Amazon", "Amazon Series", "Amazonas", "Ambi Pur", "Ambrane", "Ame", "Amefa",
+        // "American Eagle", "Aminu", "Amoli Concepts", "AMOUROUD", "Amouve", "Amritam by Good Earth", "AMYRA", "Ana Hickmann", "Anaar", "Anastasia Beverly Hills",
+        // "ANCHOR HOCKING", "Ancient Flower", "Ancient Living", "And", "And Also", "AND Fragrances", "Andis", "andMe", "Andreas Osten", "Anekaant", "Angeline", "Angie Homes"
+        // , "Angloindu", "Anika's Creations", "Anko", "Anna Claire", "Anne Klein", "Anomaly", "Ansee by Addery", "Ansell", "Anthi", "Antonio Banderas", "ANUSHKA JAIN JEWELLERY"
+        // , "Anveya", "AOMIDORI SHIMAI", "Aphrodyte Me", "Apieu", "Aqualogica", "Aramis", "Aramusk", "Arata", "Aravi Organic", "Archies", "Arganicare", "Argatin", "ARHAT ORGANIZERS"
+        // , "Ariel", "Aries Gold", "Aristocrat", "Ariul", "ARMAF", "ARMANI EXCHANGE", "Aroma Care", "Aroma Magic", "Aroma Treasures", "AromaMusk", "Aromatique", "ART & PARFUM"
+        // , "Art Vibes", "Arth", "Artifice", "Artisan Lab", "Artsy Design Co.", "Aryanveda", "asa", "Asaya", "Ashnam", "Ashpveda", "Asics", "Asmitta", "Aspen", "Assemblage"
+        // , "Assembly", "Astaberry", "Astrid", "At Home by Nilkamal", "ATARSTORY", "Atelier Des Ors", "Athlisis", "Attar Ayurveda", "Atulya", "August Bioscience"
+        // , "Auguste Skin", "Aulerth", "Auli", "AURA STUDIO", "Auraa Trends", "AuraVedic", "Aureana", "Auric", "Avasha", "Aveda", "Aveeno", "Avene", "AVI-8", "Avimee Herbal",
+        // "Avior Jewels", "Avnii Organics", "Avon", "AVYYA", "Awestuffs", "Axe", "Axiom", "Axis-Y", "AY", "AYA", "AyouthVeda", "Ayuga", "Ayusoul Ayurveda", "Ayuveer", "AYUVYA",
+        // "Azafran", "Azah", "Azai by Nykaa Fashion", "Azani", "Azzaro"]
+    ]
 
     const B = ["Babila", "BABY FOREST", "Babyliss", "Babymama", "Bacca Bucci", "BadgePack Designs", "baes CLUB", "Baesic", "BAEYORK", "Bag of Small Things", "BAGATT", "Baggit"
         , "Bagsy Malone", "Baidyanath", "Baise Gaba", "Bajaj", "BAKE", "Baked Beauty", "Baldessarini", "Balenzia", "Baller Athletik", "Balzano", "Bambo Nature", "Banana Republic"
-        , "Bangalore Refinery", "BANILA CO", "Bansri", "Baomi", "Barbie", "Barcode Professional"]
+        // , "Bangalore Refinery", "BANILA CO", "Bansri", "Baomi", "Barbie", "Barcode Professional"
+    ]
     // BarCraft
     // Bare Anatomy
     // Bare Body Essentials
@@ -790,9 +799,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            A.map((e) => {
+                            A.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -804,9 +813,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            B.map((e) => {
+                            B.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -818,9 +827,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            C.map((e) => {
+                            C.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -832,9 +841,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            D.map((e) => {
+                            D.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -846,9 +855,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            E.map((e) => {
+                            E.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -860,9 +869,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            F.map((e) => {
+                            F.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -874,9 +883,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            G.map((e) => {
+                            G.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -888,9 +897,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            H.map((e) => {
+                            H.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -902,9 +911,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            I.map((e) => {
+                            I.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -916,9 +925,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            J.map((e) => {
+                            J.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -930,9 +939,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            K.map((e) => {
+                            K.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -944,9 +953,9 @@ function Brands() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            L.map((e) => {
+                            L.map((e,index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>

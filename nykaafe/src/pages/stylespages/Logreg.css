@@ -1,0 +1,86 @@
+.register {
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid #ea0071;
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h3 ,p{
+    font-weight: 400;
+    color: #ea0071;
+}
+p{
+    text-align: center;
+    font-weight: 700;
+    color: #ea0071;
+}
+
+.register input,
+select,
+textarea {
+    border: none;
+    width: 40vw;
+    margin: 20px auto;
+    border-bottom: 1px solid #ea0071;
+    outline: none;
+    font-weight: 600;
+}
+
+textarea {
+    max-width: 40vw;
+}
+
+.register input ::placeholder {
+    font-size: larger;
+    font-weight: 700;
+    color: #ea0071;
+}
+
+.register form>div {
+    width: 40vw;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ea0071;
+    font-weight: 600;
+}
+
+.register>form>div div {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+    text-align: center;
+    color: #ea0071;
+}
+
+.register>form>div div input {
+    margin: 10px 3px;
+    float: left;
+    width: fit-content;
+    color: #ea0071;
+}
+
+.register input[type='submit'] {
+    background-color: #ea0071;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+    font-size: large;
+}
+
+.category {
+    width: 10vw;
+    margin-right: 5px;
+}
+
+.subcategory {
+    width: 30vw;
+}

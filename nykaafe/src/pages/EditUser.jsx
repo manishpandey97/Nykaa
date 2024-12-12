@@ -16,7 +16,7 @@ function EditUser() {
         const payload = { name: nameE, role: roleE };
         // console.log(payload);
         try {
-            const response = await fetch(`https://bluefly-be.onrender.com/user/update/${id}`, {
+            const response = await fetch(`https://nykaa-7922.onrender.com/user/update/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ function EditUser() {
         }
 
     }
-    // https://bluefly-be.onrender.com
+    // https://nykaa-7922.onrender.com/
     // http://localhost:10000
   return (
     <div className='register'>

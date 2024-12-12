@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function Natural() {
+function Natural({ heading, setHeading }) {
+    const navigate = useNavigate('')
+    const updateHeading = (e) => {
+        setHeading(e.target.textContent);
+        localStorage.setItem('heading', JSON.stringify(heading));
+        navigate('/sort');
+    };
     return (
         <div>
 

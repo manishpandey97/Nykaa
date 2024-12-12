@@ -14,7 +14,7 @@ function UserList() {
 
     const getUser = async () => {
         try {
-            const res = await fetch(`https://bluefly-be.onrender.com/user/`, {
+            const res = await fetch(`https://nykaa-7922.onrender.com/user/`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',

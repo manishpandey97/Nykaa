@@ -131,7 +131,7 @@
 }
 
 .footer-bottom {
-    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--footer-bottom-bg);
     color: white;
     text-align: center;

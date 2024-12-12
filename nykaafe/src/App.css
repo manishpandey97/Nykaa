@@ -23,10 +23,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   border-bottom: 1px solid lightgray;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-  /* background-color: #f9f9f9; */
   z-index: 1000;
   width: 100%;
   box-sizing: border-box;
@@ -185,23 +183,44 @@
   flex-flow: row wrap;
   align-items: center;
   align-content: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 
-.container_menu>ul li {
+.container_menu>ul div {
   list-style-type: none;
-  font-weight: 600;
-  font-size: 12px;
+  /* font-weight: 600; */
+  /* font-size: 12px; */
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.container_menu_top>ul {
+  /* margin: 0; */
+  /* padding: 0; */
+  width: 100%;
+  margin: 5px auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+
+.container_menu_top>ul div {
+  list-style-type: none;
+  font-weight: 700;
   cursor: pointer;
   padding: 15px;
 }
+
 
 .main {
   margin: 0px 20px;
   padding: 0px 20px;
   position: relative;
-  margin-top: 40vh;
+  margin-top: 20vh;
   z-index: 1;
 }
 
@@ -224,96 +243,6 @@
 
 /* css of register page */
 
-
-/* css of register and login page */
-.register {
-  margin: 30px;
-  padding: 20px;
-  border: 1px solid lightgray;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 400;
-}
-
-.register input,
-select,
-textarea {
-  border: none;
-  width: 40vw;
-  margin: 20px auto;
-  border-bottom: 1px solid rgb(47, 71, 90);
-  outline: none;
-  font-weight: 600;
-}
-
-textarea {
-  max-width: 40vw;
-}
-
-.register input ::placeholder {
-  font-size: larger;
-  font-weight: 700;
-}
-
-.register form>div {
-
-  width: 40vw;
-  margin: 10px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(32, 59, 59, 0.589);
-  font-weight: 600;
-}
-
-
-
-.register>form>div div {
-  width: 25%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 10px;
-  text-align: center;
-}
-
-.register>form>div div input {
-  margin: 10px 3px;
-  float: left;
-  width: fit-content;
-}
-
-.register input[type='submit'] {
-  background-color: rgb(7, 29, 43);
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-  width: fit-content;
-  cursor: pointer;
-}
-
-.register input[type='submit'] {
-  background-color: rgb(7, 29, 43);
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-  width: fit-content;
-  cursor: pointer;
-}
-
-.category {
-  width: 10vw;
-  margin-right: 5px;
-}
-
-.subcategory {
-  width: 30vw;
-}
 
 /* css of home page
 .product,
@@ -353,7 +282,7 @@ textarea {
   } */
 
 
-.product-image {
+/* .product-image {
   min-width: 300px;
   min-height: 200px;
   object-fit: cover;
@@ -417,9 +346,7 @@ textarea {
   background-color: rgb(5, 21, 31);
 } */
 
-
-
-.productdetail {
+*/ .productdetail {
   padding: 2vh 5vw 5vh;
   border: 1px solid lightgrey;
 }
@@ -609,11 +536,12 @@ td {
   width: '100%';
   margin: 10px 2px 0px;
   padding: 5px;
-  border: 1px solid #ccc;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
+  margin: 20px 0px;
 }
 
 /* loader */
@@ -623,8 +551,8 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid rgba(32, 59, 59, 0.589);
+  border: 5px solid #ff91bb;
+  border-top: 5px solid #ea0071;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -826,6 +754,7 @@ td {
   }
 
   .sort-right-product {
+    margin-bottom: 20px;
     padding: 0px;
   }
 }
@@ -1159,7 +1088,5 @@ td {
     width: 90%;
   }
 
-  .pagination {
-    margin-bottom: 40px;
-  }
+
 }

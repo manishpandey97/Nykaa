@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function NykaaFashion() {
+function NykaaFashion({ heading, setHeading }) {
+    const navigate = useNavigate('')
+    const updateHeading = (e) => {
+        setHeading(e.target.textContent);
+        localStorage.setItem('heading', JSON.stringify(heading));
+        navigate('/sort');
+    };
     const WhatNew = ["Recently Added "]
     const Women = ["Indianwear", "Westernwear", "Footwear", "Bags", "Lingerie", "Sportswear", "Sleep & Lounge", "Jewellery", "Watches"
         , "Accessories", "Global Store"]
@@ -26,9 +33,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            WhatNew.map((e) => {
+                            WhatNew.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -38,9 +45,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            Women.map((e) => {
+                            Women.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -52,9 +59,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            Men.map((e) => {
+                            Men.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -64,9 +71,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            Kids.map((e) => {
+                            Kids.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -79,9 +86,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            Home.map((e) => {
+                            Home.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -91,9 +98,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            HouseOfNykaa.map((e) => {
+                            HouseOfNykaa.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -102,13 +109,13 @@ function NykaaFashion() {
 
 
             <div>
-               
+
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            HouseOfNykaa1 .map((e) => {
+                            HouseOfNykaa1.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>
@@ -117,9 +124,9 @@ function NykaaFashion() {
                 <div>
                     <ul onClick={(e) => updateHeading(e)}>
                         {
-                            HouseOfNykaa1 .map((e) => {
+                            HouseOfNykaa1.map((e, index) => {
                                 return (
-                                    <li>{e}</li>
+                                    <li key={index}>{e}</li>
                                 )
                             })}
                     </ul>

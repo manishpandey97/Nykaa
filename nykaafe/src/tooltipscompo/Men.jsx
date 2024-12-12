@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function Men() {
+function Men({ heading, setHeading }) {
+  const navigate = useNavigate('')
+  const updateHeading = (e) => {
+      setHeading(e.target.textContent);
+      localStorage.setItem('heading', JSON.stringify(heading));
+      navigate('/sort');
+  };
   const Shaving = ["Razors & cartridges", "Shavers", "Trimmers", "Shaving Creams", "Shaving Foams", "Shaving Gels", "Pre & Post Shaves",
     "Aftershave Lotion", "Shaving Brus"]
 
@@ -24,9 +31,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Shaving.map((e) => {
+              Shaving.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -38,9 +45,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              BeardCare.map((e) => {
+              BeardCare.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -52,9 +59,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              HairCare.map((e) => {
+              HairCare.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -64,9 +71,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Skincare.map((e) => {
+              Skincare.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -78,9 +85,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              BathBody.map((e) => {
+              BathBody.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -91,9 +98,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Skincare.map((e) => {
+              Skincare.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -105,9 +112,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              ShopByConcern.map((e) => {
+              ShopByConcern.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -117,9 +124,9 @@ function Men() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Wellness.map((e) => {
+              Wellness.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>

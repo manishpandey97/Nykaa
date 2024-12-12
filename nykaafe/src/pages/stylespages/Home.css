@@ -2,47 +2,85 @@
 p {
     text-align: left;
     font-weight: 800;
+    color: black;
+   
 }
 
 .homepage div>h2 {
     margin-bottom: -15px;
-    opacity: 0.85;
+    opacity: 0.7;
 }
+
 .homepage div>p {
     opacity: 0.7;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+.homepage button{
+    padding: 5px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    color: #e80070;
+    background-color: rgba(211, 211, 211, 0);
+    display: flex;
+    align-items: flex-end
 }
 
 .product,
 .product1,
 .product2,
-.product3 {
+.product3,
+.product_offer {
     margin: 40px 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     text-align: center;
+
 }
 
 .product2 {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
+
 .product3 {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.product_1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.product_2 {
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.product_3 {
+    background-color: #f5f1e7;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
 }
 
 .product-card {
     border-radius: 3px;
     transition: box-shadow 0.3s ease;
-    border: 1px solid #e80070;
+    border: 1px solid #e80070b2;
+    cursor: pointer;
 
 }
 
 .product-card:hover {
-    box-shadow: 0 4px 8px #e80070;
+    box-shadow: 0 4px 8px #e80070a9;
 }
 
 .product-image {
-    min-width: 300px;
+    min-width: 440px;
     min-height: 200px;
     object-fit: cover;
     border-radius: 3px;
@@ -56,8 +94,13 @@ p {
 }
 
 .product-title {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
     font-size: 1.2em;
     margin: 20px 5px;
+    opacity: 0.9;
 }
 
 .product-card span {
@@ -72,7 +115,7 @@ p {
     justify-content: center;
     width: fit-content;
     margin: auto;
-    color:#e80070;
+    color: #e80070;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
@@ -93,7 +136,7 @@ p {
     margin: auto;
     padding: 10px 16px;
     background-color: rgb(7, 29, 43);
-    color: white;
+    color: rgba(255, 255, 255, 0.418);
     border: none;
     border-radius: 4px;
     cursor: pointer;

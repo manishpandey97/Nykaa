@@ -10,10 +10,11 @@ function ProductDetail() {
     const productId = productH._id;
 
     // console.log(product)
+    // console.log("cart",cart)
 
     const getAllProduct = async () => {
         try {
-            const res = await fetch(`https://bluefly-be.onrender.com/product/${productId}`, {
+            const res = await fetch(`https://nykaa-7922.onrender.com/product/${productId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -45,8 +46,8 @@ function ProductDetail() {
         localStorage.setItem('cartproduct', JSON.stringify(updatedCart));
     };
 
-  return (
-    <>
+    return (
+        <>
             {
                 product === '' ? (<div className="loader"></div>) : (
                     <div className='productdetail' key={product._id}>
@@ -56,7 +57,7 @@ function ProductDetail() {
                             {product.title}</h1>
                         <div className='productdetail-side'>
 
-                            <img src={product.image} alt={product.title}
+                            <img src={product.images} alt={product.title}
                                 className="product-image" />
 
                             <div className="product-card-detail">
@@ -68,11 +69,8 @@ function ProductDetail() {
                                     {product.discount}%</p>
 
                                 <p className="product-price-detail">
-                                    <span>Size: </span>
-                                    {product.size && product.size.length > 0 ? (
-                                        product.size[Math.floor(Math.random() *
-                                            (product.size.length))]) : ('')
-                                    }
+                                    <span>Amount: </span>
+                                    {product.ml} ml
                                 </p><p>
 
                                     <span>Stock:</span>
@@ -82,39 +80,37 @@ function ProductDetail() {
                                 <p className="product-price-detail">
                                     <span>gender: </span>
                                     {product.gender}</p>
-                                <p className="product-price-detail">
+                                {/* <p className="product-price-detail">
                                     <span>Color:</span>
                                     {product.color && product.color.length > 0 ?
                                         (product.color[Math.floor(Math.random() *
                                             (product.color.length))]) : ("")}
-                                </p><p>
+                                </p> */}
+                                <p>
 
                                     <span>Brand: </span>
-                                    {product.brand_name && product.brand_name.length > 0 ?
-                                        (product.brand_name[Math.floor(Math.random() *
-                                            (product.brand_name.length))]) : ("")}
+                                    {product.brand_name}
                                 </p>
 
 
 
-                                <p className="product-price-detail">
+                                {/* <p className="product-price-detail">
                                     <span>Material: </span>
                                     {product.material && product.material.length > 0 ?
                                         (product.material[Math.floor(Math.random() *
                                             (product.material.length))]) : ("")}
-                                </p><p>
+                                </p> */}
 
+                                {/* <p>
                                     <span>Wash: </span>
                                     {product.wash && product.wash.length > 0 ?
                                         (product.wash[Math.floor(Math.random() *
                                             (product.wash.length))]) : ("")}
-                                </p>
+                                </p> */}
 
                                 <p className="product-price-detail">
                                     <span>Origin Country: </span>
-                                    {product.origin_countery && product.origin_countery.length > 0 ?
-                                        (product.origin_countery[Math.floor(Math.random() *
-                                            (product.origin_countery.length))]) : ("")}
+                                    {product.origin_countery}
                                 </p>
                             </div>
 
@@ -124,17 +120,13 @@ function ProductDetail() {
 
                                 <p className="product-price-detail">
                                     <span>Category:</span>
-                                    {product.category && product.category.length > 0 ? (
-                                        product.category[Math.floor(Math.random() *
-                                            (product.category.length))]) : ('')
-                                    }
+                                    {product.category}
                                 </p>
                                 <p className="product-price-detail">
-                                    <span>SubCat Accessories:</span>
-                                    {product.subCategoryAccessories && product.subCategoryAccessories.length > 0 ?
-                                        (product.subCategoryAccessories[Math.floor(Math.random() *
-                                            (product.subCategoryAccessories.length))]) : ('')}
+                                    <span>Sub Category</span>
+                                    {product.subCategory}
                                 </p>
+                                {/* 
                                 <p className="product-price-detail">
                                     <span>SubCat Cloth:</span>
                                     {product.subCategoryCloth && product.subCategoryCloth.length > 0 ?
@@ -175,8 +167,9 @@ function ProductDetail() {
                                     {product.dress_type && product.dress_type.length > 0 ?
                                         (product.dress_type[Math.floor(Math.random() *
                                             (product.dress_type.length))]) : ("")}
-                                </p>
-                                <p>
+                                </p> */}
+
+                                {/* <p>
 
                                     <span>Neck Type </span>
                                     {product.neck_type && product.neck_type.length > 0 ?
@@ -186,7 +179,7 @@ function ProductDetail() {
                                     {product.sleeve_type && product.sleeve_type.length > 0 ?
                                         (product.sleeve_type[Math.floor(Math.random() *
                                             (product.sleeve_type.length))]) : ("")}
-                                </p>
+                                </p> */}
                             </div>
 
                         </div>
@@ -200,7 +193,7 @@ function ProductDetail() {
                     </div>
                 )}
         </>
-  )
+    )
 }
 
 export default ProductDetail

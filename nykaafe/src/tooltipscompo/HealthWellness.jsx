@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function HealthWellness() {
+  const navigate = useNavigate('')
+  const updateHeading = (e) => {
+      setHeading(e.target.textContent);
+      localStorage.setItem('heading', JSON.stringify(heading));
+      navigate('/sort');
+  };
 
   const HealthSupplements = ["Multivitamins", 'Calcium & Vitamin D', 'Magnesium & Zinc', 'Omega 3 & Fish Oil', 'Immunity Boosters & Vitamin C',
     'Other Supplements', 'Melatonin (Sleep Care)', 'Brain Boost', 'Eye Care (Lutein)', 'Gut Health']
@@ -38,9 +45,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              HealthSupplements.map((e) => {
+              HealthSupplements.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -50,9 +57,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              BeautySupplements.map((e) => {
+              BeautySupplements.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key ={index}>{e}</li>
                 )
               })}
           </ul>
@@ -65,9 +72,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              SportsNutrition.map((e) => {
+              SportsNutrition.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -77,9 +84,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              WeightManagement.map((e) => {
+              WeightManagement.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -92,9 +99,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Hydration.map((e) => {
+              Hydration.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -104,9 +111,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              HealthDrinks.map((e) => {
+              HealthDrinks.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -116,9 +123,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              SportsFitness.map((e) => {
+              SportsFitness.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -131,9 +138,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              WellnessEquipment.map((e) => {
+              WellnessEquipment.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -143,9 +150,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              PainRelief.map((e) => {
+              PainRelief.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -155,9 +162,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              HealthWellnessKitsCombos.map((e) => {
+              HealthWellnessKitsCombos.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -167,9 +174,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Watches.map((e) => {
+              Watches.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -182,9 +189,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              AyurvedaHerbs.map((e) => {
+              AyurvedaHerbs.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -197,9 +204,9 @@ function HealthWellness() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              ShopByConcern.map((e) => {
+              ShopByConcern.map((e,index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>

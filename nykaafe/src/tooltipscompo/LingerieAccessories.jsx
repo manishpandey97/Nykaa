@@ -1,6 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function LingerieAccessories() {
+function LingerieAccessories({ heading, setHeading }) {
+
+  const navigate = useNavigate('')
+  const updateHeading = (e) => {
+    setHeading(e.target.textContent);
+    localStorage.setItem('heading', JSON.stringify(heading));
+    navigate('/sort');
+  };
+
   const Lingerie = ["Bras", "Underwear", "Sleep & Lounge", "Shapewear", "Swimwear", "Maternity Wear", "Activewear"]
   const Watches = ["Smart Watches & Activity Tracker"]
 
@@ -26,9 +35,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Lingerie.map((e) => {
+              Lingerie.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -38,9 +47,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Watches.map((e) => {
+              Watches.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -53,9 +62,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Bags.map((e) => {
+              Bags.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -68,9 +77,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Footwear.map((e) => {
+              Footwear.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -83,9 +92,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Jewellery .map((e) => {
+              Jewellery.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -98,9 +107,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              Home.map((e) => {
+              Home.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>
@@ -113,9 +122,9 @@ function LingerieAccessories() {
         <div>
           <ul onClick={(e) => updateHeading(e)}>
             {
-              FeaturedBrands.map((e) => {
+              FeaturedBrands.map((e, index) => {
                 return (
-                  <li>{e}</li>
+                  <li key={index}>{e}</li>
                 )
               })}
           </ul>

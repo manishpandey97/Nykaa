@@ -34,7 +34,7 @@ function EditProduct() {
       e.preventDefault();
   
       try {
-        const res = await fetch(`https://bluefly-be.onrender.com/product/update/${productId}`, {
+        const res = await fetch(`https://nykaa-7922.onrender.com/product/update/${productId}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

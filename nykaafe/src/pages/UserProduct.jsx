@@ -19,7 +19,7 @@ function UserProduct() {
 
     const getAllProduct = async () => {
         try {
-            const res = await fetch(`http://localhost:10000/product/userproduct/${userId}`, {
+            const res = await fetch(`https://nykaa-7922.onrender.com/product/userproduct/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

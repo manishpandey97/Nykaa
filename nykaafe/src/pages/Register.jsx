@@ -10,29 +10,65 @@ function Register() {
 
     const navigate = useNavigate()
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     const payload = { name, email, password, role, mobile_no };
+    //     console.log(name, email, password, role, mobile_no);
+    //     try {
+    //         const response = await fetch(`https://nykaa-7922.onrender.com/user/register`, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(payload),
+    //         });
+
+    //         if (response.ok) {
+    //             navigate('/login');
+    //         } else {
+    //             console.error('Failed to register', response.status);
+    //         }
+    //     } catch (error) {
+    //         console.log(`${error}`)
+    //     }
+
+    // }
     const handleSubmit = async (e) => {
         e.preventDefault();
+      
         const payload = { name, email, password, role, mobile_no };
-        console.log(name, email, password, role, mobile_no);
+        console.log('Registration payload:', payload);
+      
         try {
-            const response = await fetch(`https://bluefly-be.onrender.com/user/register`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
-            });
-
-            if (response.ok) {
-                navigate('/login');
+          const response = await fetch(`https://nykaa-7922.onrender.com/user/register`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+      
+          if (response.ok) {
+            // Navigate to login if registration succeeds
+            alert('Registration successful! Redirecting to login page.');
+            navigate('/login');
+          } else {
+            // Handle non-200 responses
+            const errorData = await response.json();
+            if (errorData.message && errorData.message.includes('already registered')) {
+              alert('This user is already registered. Please log in.');
             } else {
-                console.error('Failed to register', response.status);
+              alert(`Registration failed: ${errorData.message || 'Unknown error'}`);
             }
+            console.error('Failed to register:', errorData);
+          }
         } catch (error) {
-            console.log(`${error}`)
+          // Handle network or unexpected errors
+          console.error('An error occurred during registration:', error);
+          alert('An unexpected error occurred. Please try again later.');
         }
-
-    }
+      };
+      
   return (
     <div className='register'>
             <h1>CREATE ACCOUNT</h1>

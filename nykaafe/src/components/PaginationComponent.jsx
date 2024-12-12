@@ -2,16 +2,23 @@ import React from 'react'
 
 function PaginationComponent({ totalPages, currentPage, onPageChange }) {
     const buttons = [];
-    for (let i = 1; i <= totalPages; i++) {
-        // console.log(i)
+    const startPage = Math.max(1, currentPage - 2);
+    const endPage = Math.min(totalPages, currentPage + 14);
+
+    for (let i = startPage; i <= endPage; i++) {
         buttons.push(
             <button
                 key={i}
                 onClick={() => onPageChange(i)}
                 style={{
                     margin: '5px',
-                    backgroundColor: i === currentPage ? 'rgb(58, 69, 80)' : 'lightgrey',
-                     color: 'white',
+                    backgroundColor: i === currentPage ? '#ea0071' : '#ff92bb',
+                    color: 'white',
+                    border: 'none',
+                    outline: 'none',
+                    borderRadius: '4px',
+                    padding: '10px 15px',
+                    cursor: 'pointer',
                 }}
             >
                 {i}

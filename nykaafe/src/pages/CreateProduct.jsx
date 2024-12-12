@@ -32,7 +32,7 @@ function CreateProduct() {
         const token = localStorage.getItem('token')
 
         try {
-            const response = await fetch(`https://bluefly-be.onrender.com/product/create`, {
+            const response = await fetch(`https://nykaa-7922.onrender.com/product/create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

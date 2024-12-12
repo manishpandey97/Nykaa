@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function Makeup() {
+function Makeup({ heading, setHeading }) {
 
     const navigate = useNavigate('')
 

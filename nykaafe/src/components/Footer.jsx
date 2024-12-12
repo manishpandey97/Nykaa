@@ -48,8 +48,8 @@ function Footer() {
 
                 <div className="footer-block-social">
                     <h4 style={{ display: 'flex', alignItems: 'center' }}>
-                         <IoIosCall className='icon' />
-                         1 for any help, you may call us at 1800-267-4444</h4>
+                        <IoIosCall className='icon' />
+                        1 for any help, you may call us at 1800-267-4444</h4>
                     <h4>(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM) </h4>
                 </div>
 
@@ -60,35 +60,35 @@ function Footer() {
                 <div className="footer-block-social">
                     <h4>Nykaa</h4>
                     <ul>
-                        {Nykaa.map((e,index) => { return (<li key={index}>{e}</li>) })}
+                        {Nykaa.map((e, index) => { return (<li key={index}>{e}</li>) })}
                     </ul>
                 </div>
 
                 <div className="footer-block-social">
                     <h4>Help</h4>
                     <ul>
-                        {Help.map((e,index) => { return (<li key={index}>{e}</li>) })}
+                        {Help.map((e, index) => { return (<li key={index}>{e}</li>) })}
                     </ul>
                 </div>
 
                 <div className="footer-block-social">
                     <h4>Inspire Me</h4>
                     <ul>
-                        {InspireMe.map((e,index) => { return (<li key={index}>{e}</li>) })}
+                        {InspireMe.map((e, index) => { return (<li key={index}>{e}</li>) })}
                     </ul>
                 </div>
 
                 <div className="footer-block-social">
                     <h4>Quick Links </h4>
                     <ul>
-                        {QuickLinks.map((e,index) => { return (<li key={index}>{e}</li>) })}
+                        {QuickLinks.map((e, index) => { return (<li key={index}>{e}</li>) })}
                     </ul>
                 </div>
 
                 <div className="footer-block-social">
                     <h4>Top Categories</h4>
                     <ul>
-                        {TopCategories.map((e,index) => { return (<li key={index}>{e}</li>) })}
+                        {TopCategories.map((e, index) => { return (<li key={index}>{e}</li>) })}
                     </ul>
                 </div>
             </div>

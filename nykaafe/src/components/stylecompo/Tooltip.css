@@ -4,7 +4,7 @@
 }
 
 .tooltip-box {
-    max-height: 60vh;
+    max-height: 75vh;
     /* Set a max height for better control */
     position: absolute;
     background-color: white;
@@ -85,39 +85,9 @@
 }
 
 .tooltip-box>div div>ul li:hover {
-    color: hsl(150, 80%, 60%);
+    color: #ea0071;
     /* Use HSL for better color control */
 }
-
-/* .tooltip-box.top {
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 8px;
-}
-
-.tooltip-box.right {
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    margin-left: 8px;
-}
-
-.tooltip-box.bottom {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 8px;
-}
-
-.tooltip-box.left {
-    top: 50%;
-    right: 100%;
-    transform: translateY(-0%);
-    margin-right: 8px;
-} */
-
-
 
 .tooltip-box.top {
     bottom: calc(100% + 8px);

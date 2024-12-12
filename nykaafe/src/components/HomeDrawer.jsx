@@ -6,10 +6,6 @@ import { MdCancel } from 'react-icons/md';
 import { RiLogoutBoxRFill } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 import Shoes from '../tooltipscompo/Skin';
-// import Handbag from '../tooltipscompo/Handbag';
-// import Sunglass from '../tooltipscompo/Appliances';
-// import Designers from '../tooltipscompo/Hair';
-// import JewelryAndWatch from '../tooltipscompo/JewelryAndWatch';
 import Accessories from '../tooltipscompo/Makeup';
 import Tooltip from './Tooltip';
 
