@@ -5,26 +5,18 @@
 
 .tooltip-box {
     max-height: 75vh;
-    /* Set a max height for better control */
     position: absolute;
     background-color: white;
     border-radius: 5px;
     white-space: nowrap;
     z-index: 100;
-    /* Ensure it is above other elements */
     visibility: hidden;
-    /* Default to hidden */
     opacity: 0;
-    /* Start with opacity 0 */
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    /* Smooth transition for both visibility and opacity */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add subtle shadow */
     overflow-y: auto;
     overflow-x: hidden;
     padding: 10px;
-    /* Add padding for better spacing */
-    border: 1px solid red;
     transform: translate(-3%, -3%) scale(0.95);
 }
 
@@ -32,21 +24,17 @@
 .tooltip-container:focus .tooltip-box {
     visibility: visible;
     opacity: 1;
-    /* Make visible on hover/focus */
     transform: translate(-3%, -3%) scale(1);
 }
 
 .tooltip-box>div {
     padding: 10px 20px;
-    /* Adjust padding */
     margin: 0 auto;
-    /* Center horizontally */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 40px;
-    /* Reduce gap for tighter layout */
 }
 
 .tooltip-box>div div {
@@ -61,7 +49,7 @@
     font-size: 1rem;
     text-align: left;
     font-weight: 500;
-    margin-left: -5px;
+    /* margin-left: -5px; */
 }
 
 .tooltip-box>div div>ul {
@@ -75,23 +63,20 @@
 }
 
 .tooltip-box>div div>ul li {
-    padding: 5px 0;
+    padding: 5px 0px;
     font-size: 0.9rem;
-    /* Use rem for consistency */
     font-weight: 400;
     cursor: pointer;
     transition: color 0.2s ease;
-    /* Smooth color transition */
+    padding-left: 0px;
 }
 
 .tooltip-box>div div>ul li:hover {
     color: #ea0071;
-    /* Use HSL for better color control */
 }
 
 .tooltip-box.top {
     bottom: calc(100% + 8px);
-    /* Position tooltip above the trigger */
     left: 50%;
     transform: translate(-50%, -100%) scale(0.95);
 }

@@ -1,10 +1,6 @@
 .homedrawer {
     position: relative;
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center; */
-    border: 1px solid red;
+    /* border: 5px solid yellow; */
 }
 
 .drawer-home {
@@ -12,79 +8,152 @@
     top: 0;
     left: 0;
     width: 75%;
-    height: 98%;
+    height: 100vh;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.144);
-    padding: 0px;
-    z-index: 1;
-    /* display: flex;
+    padding: 0;
+    z-index: 1000;
+    border: 1px solid lightgray;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    justify-content: center;  */
-    /* border: 1px solid red; */
-    border: 1px solid red;
-
 }
 
 .close-btn {
-    /* margin-left: 35px; */
     padding: 5px;
     background: none;
     font-size: 24px;
     cursor: pointer;
-    /* align-self: flex-end; */
-    /* color: red; */
+    align-self: flex-end;
+    margin: 10px;
 }
 
 .drawer-body-header {
-    height: 10vh;
-    flex-grow: 1;
+    /* height: 10vh; */
     display: flex;
     flex-direction: row;
-    margin: 0px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid lightgray;
+    padding: 0 15px;
+    border-bottom: 1px solid red;
+}
+
+.drawer-body-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 2px solid yellowgreen;
 
 }
 
-/* .drawer-body input {
+.brand-container {
     width: 100%;
-    padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    align-items: flex-start;
-    justify-content: center;
-    border: 1px solid red;
-} */
-
-.drawer-footer {
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center; */
-    border: 1px solid red;
 }
 
-.btn {
-    padding: 10px 15px;
-    margin-left: 10px;
+.brand-header {
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    border: none;
-    border-radius: 3px;
+    margin-bottom: 10px;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid red;
+    justify-content: space-between;
 }
 
-.cancel-btn {
-    background-color: #ccc;
+.brand {
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border 0.3s;
 }
 
-.save-btn {
-    background-color: #007bff;
-    /* color: white; */
-    align-items: center;
-    justify-content: center;
-    border: 1px solid red;
+.brand:hover {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+/* Mobile View (up to 768px) */
+@media (max-width: 768px) {
+    .drawer-home {
+        width: 85%;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .close-btn {
+        font-size: 25px;
+        margin: 3px;
+        margin-left: 0px;
+        color: #e40574;
+    }
+
+    .drawer-body-header {
+        padding: 0 5px;
+    }
+
+    .brand-header {
+        font-size: 16px;
+    }
+
+    .brand {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+/* Tablet View (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .drawer-home {
+        width: 60%;
+        height: 100vh;
+        padding: 15px;
+    }
+
+    .close-btn {
+        font-size: 22px;
+        margin: 10px;
+    }
+
+    .drawer-body-header {
+        height: 9vh;
+        padding: 0 20px;
+    }
+
+    .brand-header {
+        font-size: 17px;
+    }
+
+    .brand {
+        font-size: 15px;
+        padding: 7px 12px;
+    }
+}
+
+/* Desktop View (1025px and above) */
+@media (min-width: 1025px) {
+    .drawer-home {
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        margin: 15px;
+    }
+
+    .drawer-body-header {
+        height: 10vh;
+        padding: 0 25px;
+    }
+
+    .brand-header {
+        font-size: 18px;
+    }
+
+    .brand {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
 }

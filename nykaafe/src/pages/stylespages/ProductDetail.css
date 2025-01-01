@@ -1,0 +1,138 @@
+.productdetail {
+    padding: 20px 30px;
+    border: 1px solid #ea006f;
+    border-radius: 10px;
+}
+
+.product-title-detail {
+    margin: 10px 5px;
+}
+
+.product-title-detail span {
+    color: #322c34;
+}
+
+.productdetail-side {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+}
+
+.productdetail-side img {
+    min-height: 40vh;
+    min-width: 40%;
+    border-radius: 10px;
+}
+
+.product-card-detail {
+    padding: 5px;
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-card-detail p {
+    margin: 5px;
+    width: 100%;
+    padding: 0px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.product-card-detail p>span {
+    font-size: large;
+    font-weight: 500;
+    color: #322c34;
+}
+
+.productdetail-side span {
+    padding: 0px 3px;
+    text-align: left;
+}
+
+.product-price-detail {
+    font-size: large;
+    font-weight: 400;
+}
+
+.product-price-detail span {
+    font-weight: 500;
+    color: #322c34;
+}
+
+.productdetail-side span {
+    padding: 0px 3px;
+    text-align: left;
+}
+
+
+/* Mobile (0px to 767px) */
+@media only screen and (max-width: 767px) {
+    .productdetail {
+        padding: 10px;
+    }
+
+    .product-title-detail {
+        margin: 5px;
+    }
+
+    .productdetail-side {
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border-top: none;
+    }
+
+    .productdetail-side img {
+        height: auto;
+        min-width: 98%;
+        border-radius: 10px;
+    }
+
+    .product-card-detail {
+        padding: 5px 0x;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-button {
+        font-size: 15px;
+    }
+
+}
+
+/* Tablet (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .productdetail {
+        padding: 10px;
+    }
+
+    .product-title-detail {
+        margin: 5px;
+    }
+
+    .productdetail-side {
+        flex-direction: row;
+    }
+
+    .productdetail-side img {
+        min-width: 48%;
+    }
+
+    .product-card-detail {
+        padding: 10px;
+        height: auto;
+    }
+
+    .product-button {
+        font-size: 15px;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './stylecompo/PaginationComponent.css'
 
 function PaginationComponent({ totalPages, currentPage, onPageChange }) {
     const buttons = [];
@@ -7,7 +8,7 @@ function PaginationComponent({ totalPages, currentPage, onPageChange }) {
 
     for (let i = startPage; i <= endPage; i++) {
         buttons.push(
-            <button
+            <button className='pagination'
                 key={i}
                 onClick={() => onPageChange(i)}
                 style={{

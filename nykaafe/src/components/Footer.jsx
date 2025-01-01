@@ -1,9 +1,7 @@
 import React from 'react'
-import { CiCreditCard1, CiHeart } from 'react-icons/ci'
-import { FaFacebookF, FaPinterest, FaFacebook, FaGooglePlay, FaAppStore } from 'react-icons/fa'
+import { FaPinterest, FaFacebook, FaGooglePlay, FaAppStore } from 'react-icons/fa'
 import { MdLocalShipping, MdOutlineEmail, MdVerified } from "react-icons/md";
 import { CiInstagram, CiYoutube, CiMobile4 } from "react-icons/ci";
-// import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { IoIosCall } from "react-icons/io";
 import { TbTruckReturn } from "react-icons/tb";
@@ -55,7 +53,7 @@ function Footer() {
 
             </div>
 
-            <div className="footer-top">
+            <div className="footer-top top2" >
 
                 <div className="footer-block-social">
                     <h4>Nykaa</h4>

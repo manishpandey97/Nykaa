@@ -129,14 +129,14 @@ function Makeup({ heading, setHeading }) {
                         <li>New Launches</li>
                         <li>Gifts @ Nykaa</li>
                         <li>The Gift Store</li>
-                        
+
                     </ul>
                 </div>
                 <h1> Trending Searches</h1>
-                        <li>Nude Lipstick</li>
-                        <li> Matte Lipstick </li>
-                        <li>Red Lipstick</li>
-                        <li>Pink Lipstick</li>
+                <li>Nude Lipstick</li>
+                <li> Matte Lipstick </li>
+                <li>Red Lipstick</li>
+                <li>Pink Lipstick</li>
             </div>
 
         </div>

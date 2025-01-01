@@ -37,8 +37,6 @@ function CartDrawer() {
 
     // console.log("cart", cart)
 
-
-
     const deleteProduct = (id) => {
         console.log(id)
         const updatedCart = cart.filter((product) => id !== product._id);
@@ -60,7 +58,15 @@ function CartDrawer() {
         localStorage.setItem('cartproduct', JSON.stringify(updatedCart));
     };
 
-
+    const buyAll = () => {
+        // Clear the cart
+        setCart([]);
+        // Remove all products from localStorage
+        localStorage.removeItem('cartproduct');
+        // Display an alert
+        alert("Thank you for your purchase! Please visit us again.");
+        console.log("Cart cleared and purchase complete.");
+    };
 
     return (
         <div className='cartdrawer' ref={btnRef}>
@@ -73,7 +79,7 @@ function CartDrawer() {
                 <div className='drawer'>
                     <div className='drawer_top'>
                         <button className='close-btn' onClick={toggleDrawer}> <FaArrowLeft /> </button>
-                        <span style={{ fontWeight: 'bolder', fontSize: '20px', margin: "0px" }}>Bag </span>
+                        <span style={{ fontWeight: 'bolder', fontSize: '20px', margin: "0px" }}> Bag  {cart.length} </span>
                         <span> items</span>
                     </div>
 
@@ -84,8 +90,10 @@ function CartDrawer() {
                                     <div className="product-card_buy" key={productH._id}>
 
                                         <div className="product-card_detail">
-                                            <img src={productH.image} alt={productH.title} className="product-image_buy" />
-                                            <span className="product-title_buy">{productH.title}</span>
+                                            <span>
+                                                <img src={productH.image} alt={productH.title.split('-')[0]} className="product-image_buy" />
+                                            </span>
+                                            <span className="product-title_buy">{productH.title.split('-')[0]}</span>
                                             <span className="product-title_buy">{productH.ml} ml</span>
                                             <span><MdDeleteOutline className='card_icon' onClick={() => deleteProduct(productH._id)} />  </span>
                                         </div>
@@ -104,7 +112,9 @@ function CartDrawer() {
                     </div>
                     <div className='drawer-footer'>
                         <div className='cancel-btn'>Total ${totalPrice} </div>
-                        <button className='btn save-btn'>Proceed</button>
+                        <button className='btn save-btn'
+                            onClick={() => buyAll()}
+                        >Proceed</button>
                     </div>
                 </div>
             )}

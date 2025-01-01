@@ -1,0 +1,60 @@
+.pagination {
+    width: '100%';
+    margin: 10px auto;
+    padding: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.pagination-button {
+    margin: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* For Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+    .pagination-button {
+        margin: 5px;
+        color: white;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: xlarge;
+    }
+
+}
+
+/* For Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .pagination {
+        width: '100%';
+        margin: 10px auto;
+        padding: 5px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: large;
+    }
+
+    .pagination-button {
+        margin: 5px;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: large;
+    }
+
+}

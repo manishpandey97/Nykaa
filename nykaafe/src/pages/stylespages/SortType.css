@@ -1,0 +1,268 @@
+.sort {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sort h1 {
+    text-transform: UPPERCASE;
+    font-size: 3vw;
+
+}
+
+.sort-content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+}
+
+.sort-left {
+    padding: 10px;
+    height: 85vh;
+    width: 15vw;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sort-right {
+    height: 85vh;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.sort-right-product {
+    width: 73vw;
+    padding: 0px 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    border-top: 1px solid lightgray;
+
+}
+
+.sort-right h3 {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    font-weight: 600;
+    padding: 0px 5px;
+    color: black;
+}
+
+.sort-right>p {
+    width: 60vw;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    font-size: large;
+    margin: 10px auto;
+}
+
+.sort-right>p select {
+    width: 60vw;
+    margin: 10px 0px;
+}
+
+.brand-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.brand-header {
+    padding: 10px;
+    padding-left: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    font-weight: 500;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brand label {
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.product-button {
+    width: fit-content;
+    margin: auto;
+    padding: 10px 16px;
+    background-color: #e80070;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/* Mobile (0px to 767px) */
+@media only screen and (max-width: 767px) {
+    .sort {
+        flex-direction: column;
+    }
+
+    .sort h1 {
+        font-size: 20px;
+    }
+
+    .sort-content {
+        margin: 10px 0;
+        flex-direction: column;
+    }
+
+    .sort-left {
+        height: 20vh;
+        width: 95%;
+        text-align: center;
+    }
+
+    .sort-right {
+        height: 70vh;
+        padding: 10px;
+    }
+
+    .sort-right-product {
+        padding: 10px 0px;
+        margin-bottom: 20px;
+        border-top: none;
+
+    }
+
+    .product,
+    .product1,
+    .product2,
+    .product3,
+    .product_offer {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    .sort-right h3 {
+        font-weight: 500;
+        padding: 0px;
+    }
+
+    .sort-right>p {
+        width: 100%;
+        justify-content: center;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .sort-right>p select {
+        width: 75%;
+    }
+
+    .brand-header {
+        width: 85vw;
+        padding: 5px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .brand {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product-button {
+        font-size: 12px;
+    }
+
+}
+
+/* Tablet (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .sort {
+        flex-direction: column;
+        height: 90vh;
+        border: 1px solid lightgray;
+    }
+
+    .sort h1 {
+        font-size: 20px;
+    }
+
+    .sort-content {
+        margin: 10px auto;
+        flex-direction: column;
+    }
+
+    .sort-left {
+        text-align: center;
+        width: 90%;
+        height: auto;
+    }
+
+    .sort-right {
+        height: 70vh;
+    }
+
+    .sort-right-product {
+        width: 90vw;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-top: none;
+
+    }
+
+    .sort-right h3 {
+        font-weight: 500;
+        padding: 0px;
+    }
+
+    .sort-right>p {
+        width: 100%;
+        justify-content: center;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .sort-right>p select {
+        width: 75%;
+    }
+
+    .brand-header {
+        width: 85vw;
+        padding: 5px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .brand {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product-button {
+        font-size: 12px;
+    }
+
+}

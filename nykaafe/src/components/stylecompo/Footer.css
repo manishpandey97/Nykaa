@@ -10,7 +10,7 @@
 
 .footer {
     margin: 0;
-    margin-top: 70px;
+    margin-top: 20px;
     border-top: 1px solid lightgrey;
     text-align: left;
     width: 92vw;
@@ -18,7 +18,7 @@
 
 .footer-top {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-around;
     background-color: var(--footer-bg);
     color: white;
@@ -28,17 +28,15 @@
 .top1 {
     background-color: var(--footer-dark-bg);
 }
-.top1  .icon {
-    /* background-color:var(--highlight-color); */
+
+.top1 .icon {
     color: var(--button-text);
     font-size: larger;
     height: 5vh;
     width: 2vw;
-    /* padding: 10px; */
     margin: 10px;
-    /* border: 1px solid var(--highlight-color); */
-    /* border-radius: 100%; */
 }
+
 .middle {
     background-color: var(--footer-light-bg);
     color: black;
@@ -52,7 +50,7 @@
 }
 
 .middle .icon {
-    background-color:var(--highlight-color);
+    background-color: var(--highlight-color);
     color: var(--button-text);
     font-size: larger;
     height: 5vh;
@@ -72,6 +70,7 @@
 }
 
 .footer h4 {
+    margin: 5px;
     font-weight: 500;
 }
 
@@ -98,7 +97,6 @@
 }
 
 .footer div form {
-    /* border: 1px solid var(--highlight-color); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +114,6 @@
     flex: 1;
     font-weight: 700;
     font-size: larger;
-    /* border: 1px solid red; */
 }
 
 .footer div form button {
@@ -125,7 +122,6 @@
     color: var(--button-text);
     background-color: var(--footer-dark-bg);
     border: 1px solid white;
-    /* border: none; */
     border-radius: 3px;
     cursor: pointer;
 }
@@ -154,19 +150,170 @@
     margin: 0 2px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile (0px to 767px) */
+@media only screen and (max-width: 767px) {
+
+    .footer {
+        padding: 10px;
+        margin: 0px auto;
+        width: 90vw;
+    }
+
     .footer-top {
-        flex-direction: column;
         align-items: center;
-        text-align: center;
+        justify-content: flex-start;
+        padding: 5px 10px;
+    }
+
+    .top1 {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .top1 div h4 {
+        padding: 2px 0px;
+        margin: 0px;
+        font-size: 15px;
+    }
+
+    .top1 .icon {
+        height: 25px;
+        width: 20px;
+        margin: 5px;
     }
 
     .middle {
-        padding: 20px;
+        padding: 10px;
+    }
+
+    .top2 {
+        justify-content: space-between;
+    }
+
+    .middle .icon {
+        height: 20px;
+        width: 20px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .middle .icons {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+    }
+
+    .footer h4 {
+        margin: 5px;
+        padding: 5px;
+        font-weight: 400;
+    }
+
+    .footer ul {
+        padding: 5px 0;
+    }
+
+    .footer div form input {
+        width: 100%;
+        padding: 5px;
+        font-weight: 600;
+        font-size: medium;
+    }
+
+    .footer div form button {
+        padding: 5px;
+    }
+
+    .footer-bottom {
+        margin-bottom: 300px;
+        padding: 5px;
     }
 
     .footer-bottom ul {
-        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer-bottom ul li {
+        margin: 2px;
+    }
+}
+
+/* Tablet (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .footer {
+        margin-top: 30px;
+        width: 92vw;
+        padding: 10px ;
+    }
+
+    .footer-top {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .top1 .icon {
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+    }
+
+    .middle {
+        color: black;
+        padding: 20px;
+    }
+
+    .middle>div {
+        justify-content: space-between;
+    }
+
+    .middle .icon {
+        height: 30px;
+        width: 20px;
+        padding: 5px;
+    }
+
+    .middle .icons {
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+    }
+
+    .footer h4 {
+        margin: 0px;
+        padding: 0px;
+        font-weight: 400;
+    }
+
+    .footer ul {
+        padding: 5px 0;
+    }
+
+    .footer div form input {
+        width: 100%;
+        padding: 5px;
+        font-size: medium;
+    }
+
+    .footer div form button {
+        padding: 7px;
+        font-weight: 500;
+    }
+
+    .footer-bottom {
+        margin-bottom: 400px;
+    }
+
+    .footer-bottom ul {
+        padding: 7px 0;
+    }
+
+    .footer-bottom ul li {
+        margin: 0 5px;
+    }
+
+    .footer-bottom div span {
+        margin: 0 5px;
     }
 }

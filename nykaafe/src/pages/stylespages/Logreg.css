@@ -7,11 +7,13 @@
 
 h1,
 h2,
-h3 ,p{
+h3,
+p {
     font-weight: 400;
     color: #ea0071;
 }
-p{
+
+p {
     text-align: center;
     font-weight: 700;
     color: #ea0071;
@@ -83,4 +85,96 @@ textarea {
 
 .subcategory {
     width: 30vw;
+}
+
+
+/* Mobile (0px to 767px) */
+@media only screen and (max-width: 767px) {
+    .register {
+        margin: 10px auto;
+        padding: 5px;
+        width: 85vw;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: larger;
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .register input,
+    select,
+    textarea {
+        width: 80%;
+        margin: 20px auto;
+        font-weight: 600;
+    }
+
+    textarea {
+        width: 80vw;
+    }
+
+    .register input ::placeholder {
+        font-weight: 700;
+    }
+
+    .register form>div {
+        width: 70vw;
+    }
+
+    .register input[type='submit'] {
+        font-weight: 600;
+        padding: 10px 15px;
+        font-size: medium;
+    }
+}
+
+
+/* Tablet (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main {
+        margin: 0px 10px;
+        padding: 0px 10px;
+        margin-top: 20vh;
+    }
+
+    .register {
+        margin: 20px auto;
+        padding: 10px;
+        width: 90vw;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 600;
+    }
+
+    .register input,
+    select,
+    textarea {
+        width: 60%;
+    }
+
+    .register form>div {
+        width: 55vw;
+    }
+
+    .register input[type='submit'] {
+        font-weight: 600;
+        padding: 10px 15px;
+        font-size: large;
+    }
 }
