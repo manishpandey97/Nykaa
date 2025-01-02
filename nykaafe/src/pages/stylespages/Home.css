@@ -43,7 +43,7 @@ p {
 .product_offer {
     margin: 40px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     gap: 20px;
     text-align: center;
 
@@ -96,19 +96,20 @@ p {
 .product-card {
     border-radius: 3px;
     transition: box-shadow 0.3s ease;
-    border: 1px solid #e80070b2;
+    /* border: 1px solid #e80070b2; */
     cursor: pointer;
 
 }
 
-.product-card:hover {
+/* .product-card:hover {
     box-shadow: 0 4px 8px #e80070a9;
-}
+} */
 
 .product-image {
     margin: auto;
     width: 100%;
     max-width: 40vw;
+    max-height: 450px;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
